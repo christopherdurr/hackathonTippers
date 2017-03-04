@@ -101,14 +101,115 @@
         </div>
     </section>
     
-        <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-            </div>
-        </div>
-    </section>
-
-    
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+<script src="d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Tutors for classes",
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"text": "Which classes have tutors",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 600,
+		"pieInnerRadius": "20%",
+		"pieOuterRadius": "85%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"content": [
+			{
+				"label": "ICS 32",
+				"value": 3,
+				"color": "#cc9fb1"
+			},
+			{
+				"label": "ICS 33",
+				"value": 43,
+				"color": "#e65414"
+			},
+			{
+				"label": "ICS 31",
+				"value": 36,
+				"color": "#8b6834"
+			},
+			{
+				"label": "ICS 45C",
+				"value": 120,
+				"color": "#248838"
+			},
+			{
+				"label": "ICS 45J",
+				"value": 24,
+				"color": "#efefef"
+			},
+			{
+				"label": "ICS 6N",
+				"value": 35,
+				"color": "#b82d2d"
+			},
+			{
+				"label": "ICS 6B",
+				"value": 44,
+				"color": "#261dd4"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 250,
+			"size": 15
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+});
+</script>
     
     <!-- Download Section -->
     <section id="download" class="content-section text-center">
